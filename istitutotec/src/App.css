@@ -1,0 +1,203 @@
+.contenitore {
+	display: flex;
+	flex-direction: row; /* column */
+	justify-content: space-between; /* center */
+	align-items: center; /* flex-start */
+	height: 1000px;
+	border: 2px solid black;
+	padding: 20px;
+}
+
+.box {
+	flex: 1;
+	margin: 5px;
+	padding: 20px;
+	text-align: center;
+	background-color: lightblue;
+	border: 1px solid blue;
+}
+
+div:target {
+    border: 3px solid red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    line-height: 1.6;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 25px;
+    padding: 10px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0d6efd;
+}
+
+
+.titolo h1 {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+
+.card {
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.iscriviti {
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.iscriviti h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+}
+
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0d6efd;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0b5ed7;
+}
+
+
+#corsix {
+    padding: 50px 20px;
+}
+
+.contenitore {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box {
+    flex: 1 1 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.box img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+footer {
+    margin-top: 50px;
+    background-color: #212529;
+    color: white;
+    padding: 40px 20px;
+}
+
+footer h2, footer h3 {
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+iframe {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenitore {
+        flex-direction: column;
+    }
+}
