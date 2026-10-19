@@ -1,6 +1,18 @@
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const path = require("path");
+const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 module.exports = {
+  mode: "production",
+
+  entry: "./src/index.tsx",
+
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "main.js",
+    publicPath: "/istituto-tecnico-react/",
+    clean: true
+  },
+
   module: {
     rules: [
       {
@@ -9,7 +21,11 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env", '@babel/preset-react', '@babel/preset-typescript']
+            presets: [
+              "@babel/preset-env",
+              "@babel/preset-react",
+              "@babel/preset-typescript"
+            ]
           }
         }
       },
@@ -23,17 +39,12 @@ module.exports = {
   devServer: {
     historyApiFallback: true
   },
-  
+
   resolve: {
-    extensions: [
-      ".js",
-      ".ts",
-      ".tsx"
-    ]
+    extensions: [".js", ".ts", ".tsx"]
   },
 
   plugins: [
     new ForkTsCheckerWebpackPlugin()
   ]
-
 };
