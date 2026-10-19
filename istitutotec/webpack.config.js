@@ -10,7 +10,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js",
-    publicPath: "/istituto-tecnico-react/",
+    publicPath: process.env.NODE_ENV === "production"
+  ? "/istituto-tecnico-react/"
+  : "/",
     clean: true
   },
 
@@ -55,4 +57,5 @@ module.exports = {
       }
     ]
   })
-]
+ ]
+};
