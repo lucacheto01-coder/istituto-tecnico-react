@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "copy-webpack-plugin": "^13.0.1",
     "@babel/core": "^8.0.1",
     "@babel/preset-env": "^8.0.2",
     "@babel/preset-react": "^8.0.1",
